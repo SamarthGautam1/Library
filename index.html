@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>My Library</title>
+</head>
+<body>
+<header>
+<h1>My Library</h1>
+<button id="newBookBtn">New Book</button>
+</header>
+
+
+<main>
+<div id="libraryGrid" aria-live="polite"></div>
+<div id="emptyState" hidden>No books yet — click "New Book" to add one.</div>
+</main>
+
+
+<dialog id="bookDialog">
+<h3>Add a new book</h3>
+<form id="bookForm">
+<input name="title" placeholder="Title" required />
+<input name="author" placeholder="Author" required />
+<input name="pages" type="number" min="1" placeholder="Pages" required />
+<label><input name="read" type="checkbox" /> Already read</label>
+<div>
+<button type="submit">Add book</button>
+<button type="button" id="cancelForm">Cancel</button>
+</div>
+</form>
+</dialog>
+
+
+<script src="script.js"></script>
+</body>
+</html>
